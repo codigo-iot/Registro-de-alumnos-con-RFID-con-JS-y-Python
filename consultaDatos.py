@@ -7,7 +7,7 @@ reader = SimpleMFRC522()
 
 try:
     id,text = reader.read()
-    print("La tarjeta con id: "+id+" esta registrada con el nombre: "+text)
+    print(text)
     sys.stdout.flush()
 finally:
     GPIO.cleanup()

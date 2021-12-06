@@ -6,10 +6,8 @@ import sys
 reader = SimpleMFRC522()
 
 try:
-    id,text = reader.read()
     nombre = sys.stdin.readline()
     reader.write(nombre)
-    print("Nombre almacenado en tarjeta con ID: "+id)
     sys.stdout.flush()
 finally:
     GPIO.cleanup()
